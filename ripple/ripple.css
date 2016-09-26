@@ -1,0 +1,23 @@
+[data-ripple] .ripple {
+    position: absolute;
+    z-index: 0;
+    display: block;
+    background: #ffffff;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    animation: ripple 1.4s;
+    transform: scale(100);
+    opacity: 0;
+}
+
+@keyframes ripple {
+    from {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(100);
+        opacity: 0;
+    }
+}
