@@ -12,7 +12,7 @@ $("对象").ripple();
 即可。
 
 例如：
-<code>
+
 <link href="ripple.css" rel="stylesheet">
 
 <button class="btn" data-ripple="#f6f6f6">Button</button>
@@ -23,4 +23,4 @@ $("对象").ripple();
 <script>
     $('.btn').ripple();
 </script>
-</code>
+
