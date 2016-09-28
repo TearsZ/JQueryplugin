@@ -21,6 +21,6 @@ $("对象").ripple();
 <script src="ripple.jquery.js"></script>
 
 <script>
-    $('.btn').ripple();
+    $('.btn').rippleBtn();
 </script>
 
