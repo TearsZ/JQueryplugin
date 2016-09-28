@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <title>水波练习</title>
@@ -11,21 +11,49 @@
             height: 40px;
             line-height: 40px;
             text-align: center;
+            border-radius: 4px;
+            background: #26c7ff;
+            border: 1px solid transparent;
+            color: #fff;
+            outline: 0;
+            cursor: pointer;
+            margin: 4px;
+        }
+
+        .btn-red {
+            background: #ff3737;
+        }
+
+        .btn-orange {
+            background: #ffbd20;
+        }
+
+        .btn-green {
+            background: #53b5a9;
         }
     </style>
 </head>
 <body>
 
+<div class="row">
+    <button class="btn" data-ripple="#f6f6f6">Button</button>
+    <button class="btn btn-red" data-ripple="#f6f6f6">Button</button>
+    <button class="btn btn-orange" data-ripple="#f6f6f6">Button</button>
+    <button class="btn btn-green" data-ripple="#f6f6f6">Button</button>
+</div>
 
-<button class="btn" data-ripple="#f6f6f6">Button</button>
+<div class="row">
+    <button class="btn" data-ripple="blue">Button</button>
+    <button class="btn btn-red" data-ripple="red">Button</button>
+    <button class="btn btn-orange" data-ripple="orange">Button</button>
+    <button class="btn btn-green" data-ripple="green">Button</button>
+</div>
 
-<script src="jquery.js"></script>
-<script src="ripple.jquery.js"></script>
 
 
-<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="../jquery-3.1.1.min.js"></script>
 <!-- include ripple js-->
-<script src="spinner.jquery.js"></script>
+<script src="ripple.jquery.js"></script>
 
 <script>
     $('.btn').rippleBtn();
