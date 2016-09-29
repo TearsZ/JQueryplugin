@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch 开关组件</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/air.css">
+    <link rel="stylesheet" href="switch.css">
+</head>
+<body>
+
+
+
+<div>
+    <div data-plugin="switch">
+        <input type="checkbox" checked>
+    </div>
+
+    <div data-plugin="switch">
+        <input type="checkbox">
+    </div>
+    <div>
+        <div data-plugin="switch">
+            <input type="checkbox" checked>
+        </div>
+
+        <div data-plugin="switch">
+            <input type="checkbox">
+        </div>
+    </div>
+</div>
+
+
+
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="switch.jquery.js"></script>
+<script>
+    $("[data-plugin='switch']").switch();
+</script>
+
+
+</body>
+</html>
