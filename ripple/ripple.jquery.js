@@ -1,20 +1,39 @@
 /**
- * Created by 80900 on 2016-9-26 23:38.
+ * Created by wsgj on 2016-9-29 12:00.
  * Author: Titor foolsecret@163.com
  */
 (function ($) {
     $.fn.extend({
-        rippleBtn : function () {
+        rippling : function () {
             return this.each(function () {
+
                 var me = $(this),
+                    contents = me.html(),
                     rippleColor = me.data('ripple');
 
-                me.css({
-                    position: 'relative',
-                    overflow: 'hidden',
+
+                /* *************************************************** */
+                /* ******************  初始化操作开始 ******************* */
+                var bearBox = $("<span class='ripple-content-box'>"+contents+"</span>").css({
+                    'position' : 'relative',
+                    'z-index' : 3
                 });
 
-                me.on("mousedown", function (e) {
+                // 清空原有数据
+                me.css({
+                    'position' : 'relative',
+                    "overflow" : 'hidden'
+                }).html('');
+
+                // 把用容器包含的内容放到原来的内容位置中：
+                me.append(bearBox);
+
+                /* ******************  初始化操作完成 ******************* */
+                /* *************************************************** */
+
+
+
+                me.on('mousedown', function (e) {
                     // 获取鼠标点击的位置
                     var x = e.pageX,
                         y = e.pageY;
@@ -28,7 +47,8 @@
                     ripple.css({
                         left: x-2,
                         top : y-2,
-                        background: rippleColor,
+                        'z-index' : 2,
+                        background: rippleColor
                     });
 
                     // 给按钮添加水波元素：
@@ -38,8 +58,8 @@
                     ripple.on("animationend", function () {
                         ripple.remove();
                     });
+                }); // on is ending.
 
-                });
 
             });
         }
