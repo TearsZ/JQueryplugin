@@ -16,11 +16,14 @@ $("对象").ripple();
 <link href="ripple.css" rel="stylesheet">
 
 <button class="btn" data-ripple="#f6f6f6">Button</button>
+<button class="btn" data-ripple="#f6f6f6">
+    <span><strong>Button</strong></span>
+</button>
 
 <script src="jquery.js"></script>
 <script src="ripple.jquery.js"></script>
 
 <script>
-    $('.btn').rippleBtn();
+    $('.btn').rippling();
 </script>
 
